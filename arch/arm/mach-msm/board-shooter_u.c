@@ -1340,7 +1340,7 @@ static struct spi_board_info sp3d_spi_board_info[] __initdata = {
 
 static struct camera_flash_cfg msm_camera_sensor_flash_cfg = {
 	.low_temp_limit		= 5,
-	.low_cap_limit		= 10,
+	.low_cap_limit		= 5,
 };
 
 #ifdef CONFIG_SP3D
@@ -1360,7 +1360,7 @@ static struct msm_camera_sensor_info msm_camera_sensor_sp3d_data = {
 	.num_resources	= ARRAY_SIZE(msm_camera_resources),
 	.flash_data		= &flash_sp3d,
 	.flash_cfg = &msm_camera_sensor_flash_cfg,
-	.stereo_low_cap_limit = 15,
+	.stereo_low_cap_limit = 5,
 	.mirror_mode = 0,
 	.csi_if		= 1,
 	.dev_node	= 0
@@ -2839,7 +2839,7 @@ static struct pm8058_led_config pm_led_config_xb[] = {
 		.duites_size = 8,
 		.duty_time_ms = 32,
 		.lut_flag = PM_PWM_LUT_RAMP_UP | PM_PWM_LUT_PAUSE_HI_EN,
-		.out_current = 20,
+		.out_current = 2,
 	},
 	{
 		.name = "green",
